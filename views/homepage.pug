@@ -1,0 +1,18 @@
+// views/homepage.pug
+doctype html
+html
+  head
+    title= title
+  body
+    h1 Custom Objects
+    a(href="/update-cobj") Add to this table
+    table
+      tr
+        th Name
+        th Property 1
+        th Property 2
+      each obj in objects
+        tr
+          td= obj.properties.name
+          td= obj.properties.property1
+          td= obj.properties.property2
