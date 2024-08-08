@@ -1,18 +1,17 @@
-// views/homepage.pug
 doctype html
 html
   head
     title= title
   body
-    h1 Custom Objects
+    h1 Custom Objects List
     a(href="/update-cobj") Add to this table
     table
       tr
         th Name
-        th Property 1
-        th Property 2
-      each obj in objects
+        th Description
+        th Category
+      each record in records
         tr
-          td= obj.properties.name
-          td= obj.properties.property1
-          td= obj.properties.property2
+          td= record.properties.name
+          td= record.properties.description
+          td= record.properties.category
